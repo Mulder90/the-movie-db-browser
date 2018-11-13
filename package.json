@@ -1,0 +1,11 @@
+{
+  "name": "dazn-project",
+  "version": "1.0.0",
+  "description": "DAZN interview project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lorenzo Cinque <lorenzo.cinque@gmail.com>",
+  "license": "MIT"
+}
