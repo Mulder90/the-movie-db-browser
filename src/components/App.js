@@ -1,3 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default () => <div>Ciao DAZN!</div>;
+const App = ({ apiKey }) => <div>{apiKey}</div>;
+
+App.propTypes = {
+  apiKey: PropTypes.string.isRequired
+};
+
+export default App;

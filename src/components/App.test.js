@@ -3,7 +3,7 @@ import { render } from 'react-testing-library';
 
 import App from './App';
 
-test('Renders Ciao DAZN!', () => {
-  const { container } = render(<App />);
-  expect(container).toHaveTextContent('Ciao DAZN!');
+test('Renders provided API_KEY', () => {
+  const { container } = render(<App apiKey="SUPER_SECRET_API_KEY" />);
+  expect(container).toHaveTextContent('SUPER_SECRET_API_KEY');
 });
