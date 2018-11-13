@@ -32,13 +32,14 @@
     "jest": "^23.6.0",
     "jest-dom": "^2.1.1",
     "prettier": "^1.15.2",
-    "prop-types": "^15.6.2",
     "react-testing-library": "^5.2.3",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "serve": "^10.0.2"
