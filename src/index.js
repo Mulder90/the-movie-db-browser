@@ -8,6 +8,9 @@ ReactDOM.render(
     apiKey={process.env.API_KEY}
     endpoint="https://api.themoviedb.org/3/search/movie"
     title="themoviedb search engine"
+    // XXX: I should have handled in a better way images resolution. Anyway, c'est la vie :)
+    imageEndpoint="https://image.tmdb.org/t/p/w300/"
+    imagePlaceholderEndpoint="https://placekitten.com/300/450"
   />,
   document.getElementById('root')
 );

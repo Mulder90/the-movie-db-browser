@@ -25,11 +25,19 @@ class App extends Component {
   }
 
   render() {
-    const { endpoint, apiKey, title } = this.props;
+    const {
+      endpoint,
+      apiKey,
+      title,
+      imageEndpoint,
+      imagePlaceholderEndpoint
+    } = this.props;
     const { query } = this.state;
 
     return (
-      <Provider value={{ endpoint, apiKey }}>
+      <Provider
+        value={{ endpoint, apiKey, imageEndpoint, imagePlaceholderEndpoint }}
+      >
         <Layout>
           <Header title={title} />
           <SearchBar onChange={this.handleSearchTermChange} />
@@ -43,7 +51,9 @@ class App extends Component {
 App.propTypes = {
   apiKey: PropTypes.string.isRequired,
   endpoint: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  imageEndpoint: PropTypes.string.isRequired,
+  imagePlaceholderEndpoint: PropTypes.string.isRequired
 };
 
 export default App;

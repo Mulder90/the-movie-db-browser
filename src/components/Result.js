@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Consumer } from './Context';
 
 const Item = styled.div`
   overflow: hidden;
@@ -28,21 +29,23 @@ const Title = styled.div`
   margin: 5px;
 `;
 
-const Result = ({ title, poster_path }) => {
-  {
-    const src = poster_path
-      ? `https://image.tmdb.org/t/p/w300/${poster_path}`
-      : 'https://placekitten.com/300/450';
-    return (
-      <Item>
-        <Img src={src} alt={title} />
-        <TitleContainer>
-          <Title>{title}</Title>
-        </TitleContainer>
-      </Item>
-    );
-  }
-};
+const Result = ({ title, poster_path }) => (
+  <Consumer>
+    {({ imageEndpoint, imagePlaceholderEndpoint }) => {
+      const src = poster_path
+        ? `${imageEndpoint}${poster_path}`
+        : imagePlaceholderEndpoint;
+      return (
+        <Item>
+          <Img src={src} alt={title} />
+          <TitleContainer>
+            <Title>{title}</Title>
+          </TitleContainer>
+        </Item>
+      );
+    }}
+  </Consumer>
+);
 
 Result.defaultProps = {
   title: '',
