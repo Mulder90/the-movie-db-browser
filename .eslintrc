@@ -14,7 +14,8 @@
     "react/jsx-filename-extension": "off"
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "jest": true
   },
   "parser": "babel-eslint"
 }
