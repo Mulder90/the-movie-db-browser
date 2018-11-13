@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Search from './Search';
 import Results from './Results';
+
+const Info = styled.div`
+  font-size: 20px;
+  margin-bottom: 10px;
+`;
 
 const Content = ({ query }) => (
   <React.Fragment>
@@ -9,18 +15,18 @@ const Content = ({ query }) => (
       <Search query={query}>
         {({ response, isLoading, hasError }) => {
           if (isLoading) {
-            return <div>Loading...</div>;
+            return <Info>Loading...</Info>;
           }
 
           if (hasError) {
-            return <div>Ops! Something went wrong :( Please retry.</div>;
+            return <Info>Ops! Something went wrong :( Please retry.</Info>;
           }
 
           return <Results response={response} />;
         }}
       </Search>
     ) : (
-      <div>Please type something in the search bar</div>
+      <Info>Type something in the search bar to start searching.</Info>
     )}
   </React.Fragment>
 );

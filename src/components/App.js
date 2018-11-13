@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { Provider } from './Context';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Content from './Content';
+
+const Layout = styled.div`
+  margin: 10px;
+  font-family: 'Open Sans';
+`;
 
 class App extends Component {
   constructor(props) {
@@ -24,9 +30,11 @@ class App extends Component {
 
     return (
       <Provider value={{ endpoint, apiKey }}>
-        <Header title={title} />
-        <SearchBar onChange={this.handleSearchTermChange} />
-        <Content query={query} />
+        <Layout>
+          <Header title={title} />
+          <SearchBar onChange={this.handleSearchTermChange} />
+          <Content query={query} />
+        </Layout>
       </Provider>
     );
   }

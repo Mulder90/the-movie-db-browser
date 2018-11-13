@@ -1,6 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import styled from 'styled-components';
+
+const Input = styled.input`
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  outline: none;
+  padding: 10px;
+`;
 
 class SearchBar extends Component {
   constructor(props) {
@@ -30,7 +41,7 @@ class SearchBar extends Component {
     const { value } = this.state;
 
     return (
-      <input
+      <Input
         type="text"
         name="query"
         placeholder="Search for a movie..."
