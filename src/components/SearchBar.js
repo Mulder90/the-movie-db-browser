@@ -23,8 +23,8 @@ class SearchBar extends Component {
   }
 
   componentDidMount() {
-    const { onChange } = this.props;
-    this.search = debounce(onChange, 250);
+    const { onChange, debounceTime } = this.props;
+    this.search = debounce(onChange, debounceTime);
   }
 
   handleOnChange(event) {
@@ -52,8 +52,13 @@ class SearchBar extends Component {
   }
 }
 
+SearchBar.defaultProps = {
+  debounceTime: 500
+};
+
 SearchBar.propTypes = {
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  debounceTime: PropTypes.number
 };
 
 export default SearchBar;
