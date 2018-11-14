@@ -15,12 +15,10 @@ const Content = ({ query }) => (
       <Search query={query}>
         {({ response, isLoading, hasError }) => {
           if (isLoading) {
-            // XXX: Should be a real loader. Seriously.
             return <Info>Loading...</Info>;
           }
 
           if (hasError) {
-            // XXX: Same
             return <Info>Ops! Something went wrong :( Please retry.</Info>;
           }
 

@@ -3,8 +3,6 @@ import { render, fireEvent, wait } from 'react-testing-library';
 
 import SearchBar from '../SearchBar';
 
-// XXX: Please note that cleanup after each test is handled inside jest.setup.js
-
 test('Call onChange handler when input value change', () => {
   const handleOnChange = jest.fn();
   const { getByPlaceholderText } = render(

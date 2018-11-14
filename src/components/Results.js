@@ -24,7 +24,7 @@ const Results = ({ response }) => {
         <Info>Found: {results.length} items</Info>
         <Container>
           {results.map(item => (
-            <Result key={item.id} {...item} />
+            <Result key={item.id} title={item.title} posterPath={item.poster_path}/>
           ))}
         </Container>
       </React.Fragment>
@@ -35,8 +35,6 @@ const Results = ({ response }) => {
 };
 
 Results.propTypes = {
-  // XXX: It's bettere to specify what kind of object it's expected.
-  // Anyway, I don't have time :)
   response: PropTypes.object.isRequired
 };
 

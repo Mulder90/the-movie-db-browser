@@ -7,8 +7,7 @@ ReactDOM.render(
   <App
     apiKey={process.env.API_KEY}
     endpoint="https://api.themoviedb.org/3/search/movie"
-    title="/THE_MOVIE_DB/ search engine - An incredible app by Lorenzo Cinque"
-    // XXX: I should have handled in a better way images resolution. Anyway, c'est la vie :)
+    title="/THE_MOVIE_DB/ movie browser"
     imageEndpoint="https://image.tmdb.org/t/p/w300/"
     imagePlaceholderEndpoint="https://placekitten.com/300/450"
   />,

@@ -29,11 +29,11 @@ const Title = styled.div`
   margin: 5px;
 `;
 
-const Result = ({ title, poster_path }) => (
+const Result = ({ title, posterPath }) => (
   <Consumer>
     {({ imageEndpoint, imagePlaceholderEndpoint }) => {
-      const src = poster_path
-        ? `${imageEndpoint}${poster_path}`
+      const src = posterPath
+        ? `${imageEndpoint}${posterPath}`
         : imagePlaceholderEndpoint;
       return (
         <Item>
@@ -49,12 +49,12 @@ const Result = ({ title, poster_path }) => (
 
 Result.defaultProps = {
   title: '',
-  poster_path: ''
+  posterPath: ''
 };
 
 Result.propTypes = {
   title: PropTypes.string,
-  poster_path: PropTypes.string
+  posterPath: PropTypes.string
 };
 
 export default Result;

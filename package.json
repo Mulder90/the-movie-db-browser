@@ -1,7 +1,7 @@
 {
-  "name": "dazn-project",
+  "name": "tmdb-movie-browser",
   "version": "1.0.0",
-  "description": "DAZN interview project",
+  "description": "TMDB movie browser",
   "scripts": {
     "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
