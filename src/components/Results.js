@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Result from './Result';
 
+// XXX: I love the new css display: grid ❤️
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -30,7 +31,7 @@ const Results = ({ response }) => {
     );
   }
 
-  return <Info>No items found</Info>;
+  return <Info>Found: 0 items. I'll give you an hint: Star Wars</Info>;
 };
 
 Results.propTypes = {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import { debounce } from 'lodash';
 import styled from 'styled-components';
 
 const Input = styled.input`
@@ -24,7 +24,7 @@ class SearchBar extends Component {
 
   componentDidMount() {
     const { onChange } = this.props;
-    this.search = _.debounce(onChange, 250);
+    this.search = debounce(onChange, 250);
   }
 
   handleOnChange(event) {

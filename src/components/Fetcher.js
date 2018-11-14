@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Fetcher extends React.Component {
+class Fetcher extends Component {
   constructor(props) {
     super(props);
     this.state = {

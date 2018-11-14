@@ -15,10 +15,12 @@ const Content = ({ query }) => (
       <Search query={query}>
         {({ response, isLoading, hasError }) => {
           if (isLoading) {
+            // XXX: Should be a real loader. Seriously.
             return <Info>Loading...</Info>;
           }
 
           if (hasError) {
+            // XXX: Same
             return <Info>Ops! Something went wrong :( Please retry.</Info>;
           }
 
@@ -26,7 +28,9 @@ const Content = ({ query }) => (
         }}
       </Search>
     ) : (
-      <Info>Type something in the search bar to start searching.</Info>
+      <Info>
+        Type something in the search bar to start searching. hint: Matrix
+      </Info>
     )}
   </React.Fragment>
 );
